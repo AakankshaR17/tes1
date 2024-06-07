@@ -1,0 +1,207 @@
+/* Code for The Bubble Animation */
+
+.bubble-dance {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 0;
+
+	/* Default values for duration and y value (For Desktop) */
+	--transform-duration: 6s;
+	--transform-y: -300vh;
+}
+
+.bubble-dance img {
+	opacity: 0;
+	animation-name: bubble-rise;
+	animation-timing-function: linear;
+	animation-duration: var(--transform-duration);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bubble-rise {
+	0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(var(--transform-y));
+		opacity: 1;
+	}
+}
+
+/* Delay for each bubble separately (Desktop View)*/
+.bubble-dance img:nth-child(1) {
+	animation-delay: 2s;
+}
+
+.bubble-dance img:nth-child(2) {
+	animation-delay: 5s;
+}
+
+.bubble-dance img:nth-child(3) {
+	animation-delay: 3s;
+}
+
+.bubble-dance img:nth-child(4) {
+	animation-delay: 6s;
+}
+
+.bubble-dance img:nth-child(5) {
+	animation-delay: 1s;
+}
+
+.bubble-dance img:nth-child(6) {
+	animation-delay: 4s;
+}
+
+.bubble-dance img:nth-child(7) {
+	animation-delay: 6s;
+}
+
+/* Delay for each bubble separately (Mobile View) */
+@media screen and (max-width: 650px) {
+	.bubble-dance img:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.bubble-dance img:nth-child(2) {
+		animation-delay: 10s;
+	}
+
+	.bubble-dance img:nth-child(3) {
+		animation-delay: 6s;
+	}
+
+	.bubble-dance img:nth-child(4) {
+		animation-delay: 12s;
+	}
+
+	.bubble-dance img:nth-child(5) {
+		animation-delay: 2s;
+	}
+
+	.bubble-dance img:nth-child(6) {
+		animation-delay: 8s;
+	}
+
+	.bubble-dance img:nth-child(7) {
+		animation-delay: 13s;
+	}
+
+}
+
+
+
+/* Code for the Animation in Footer .... Social Media Icons */
+
+/* Properties for footer */
+#eco-footer {
+	width: 100%;
+	background: #cee9b5;
+	text-align: center;
+	padding: 10px 0px;
+	color: #0a3520;
+}
+
+#eco-footer span {
+	color: #0a3520;
+	padding: 10px 0px;
+}
+
+.eco-networks {
+	margin: 5px;
+}
+
+.eco-networks .eco-link {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+}
+
+.eco-networks .eco-link:hover {
+	width: 11rem;
+	text-align: left;
+}
+
+/* To rotate icon by 360 degree */
+.eco-networks .eco-link:hover i {
+	transform: rotate(360deg);
+}
+
+.eco-networks .eco-link .icon {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.eco-networks .eco-link .icon i {
+	font-size: 25px;
+	line-height: 50px;
+	color: #fff;
+	transition-duration: 0.8s;
+	transition-property: transform;
+}
+
+/* Set Color for each Icon */
+.eco-networks .eco-link:nth-child(1) .icon {
+	background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.eco-networks .eco-link:nth-child(2) .icon {
+	background: #0072b1;
+}
+
+.eco-networks .eco-link:nth-child(3) .icon {
+	background: #171515;
+}
+
+.eco-networks .eco-link:nth-child(4) .icon {
+	background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+}
+
+.eco-networks .eco-link span {
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 10px;
+	transition: all 0.3s ease-out;
+}
+
+/* Set Color for each text */
+.eco-networks .eco-link:nth-child(1) span {
+	color: #E1306C;
+}
+
+.eco-networks .eco-link:nth-child(2) span {
+	color: #0072b1;
+}
+
+.eco-networks .eco-link:nth-child(3) span {
+	color: #171515;
+}
+
+.eco-networks .eco-link:nth-child(4) span {
+	color: #0d4db4;
+}
+
+/* To prevent animation in mobile view */
+@media screen and (max-width: 500px) {
+	.eco-networks .eco-link:hover {
+		width: 50px;
+	}
+}
